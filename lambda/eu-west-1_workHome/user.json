@@ -1,0 +1,23 @@
+{
+    "abdos":{
+        "exercices":["le gainage avant",
+        "le lever de jambes",
+        "les abdos classique",
+        "les ciseaux"],
+        "time_exercice":22
+    },
+    "haut du corps":{
+        "exercices":["la planche classique",
+        "le superman",
+        "les pompes",
+        "les touches épaules"],
+        "time_exercice":22
+    },
+    "bas du corps":{
+        "exercices":["les fentes",
+        "les montées de genoux",
+        "les sauts avec écart de jambes",
+        "les squats"],
+        "time_exercice":22
+    }
+}

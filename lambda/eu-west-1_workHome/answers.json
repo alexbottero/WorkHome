@@ -1,0 +1,35 @@
+{
+    "launchTextSpeech":[
+        "Bienvenue dans le skill qui te permet de faire tes séances de sport à domicile. Tu as le choix entre le programme abdos, haut du corps ou bas du corps. Quel programme veux-tu faire pour cette session?",
+        "Tu veux faire des séances de sport chez toi? Tu es au bon endroit. Tu as le choix entre la session abdos, haut du corps ou bas du corps. Quellle session veux-tu faire?",
+        "Tu as fait le bon choix en lançant cette skill! Prêt pour te muscler? Tu as le choix entre la séance abdos, haut du corps ou bas du corps. Quelle séance souhaites-tu faire?"
+
+    ],
+        "typeTextSpeech":[
+            ["Bon choix, vous avez choisi la séance ","Elle est composée des exercices suivants:","Dis moi quand tu es prêt à commencer."],
+            ["Bien, nous allons partir sur une session ","Pour cela il y a les exercices suivants:","Peut-on commencer la séance ?"],
+            ["Ce sera donc la séance","elle contient les exercices suivants:","Peut on lancer la session?"]
+        ],
+        "exerciceTextSpeech":[
+            ["Exercice 1: ","Exercice 2: ","Exercice 3: ","Exercice 4: ","Fin de l'exercice.","Veux-tu refaire encore un cycle?"],
+            ["Exercice 1: ","Exercice 2: ","Exercice 3: ","Exercice 4: ","Fin de cet exercice.","Tu veux continuer?"],
+            ["Exercice 1: ","Exercice 2: ","Exercice 3: ","Exercice 4: ","Exercice terminé. ","Encore une fois?"]
+        ],
+        "endTextSpeech":[
+            "Fin de la séance, comment l'as-tu trouvé?",
+            "Séance terminé, plûtot bien, facile ou difficile?",
+            "Tu as finis, comment as-tu trouvé la séance?"
+        ],
+        "updateTextSpeech":[
+            ["Je comprends, je vais diminuer le temps de chaque exercice pour la prochaine fois.","Je comprends, je vais augmenter le temps de chaque exercice pour la prochaine fois.","Le temps maximal pour chaque exercice est atteint, pour continuer à progresser augmente le nombre de répétitions.","Le temps minimal est atteint,  diminue le nombre de répétitions.","Tu as bien travaillé, on se retrouve au plus vite pour une nouvelle séance."],
+            ["Très bien, je vais raccourcir  chaque exercice de 2 secondes pour la prochaine séance.","Très bien, je vais augmenter le temps de chaque exercice de 2 secondes pour la prochaine séance.","Tu as atteint le temps maximal pour chaque exercice, augmente le nombre de répétitions.","Tu as atteint temps minimal pour chaque exercice,  diminue le nombre de répétitions.","Bon entrainement en tout cas, on se retrouve vite pour une nouvelle session."],
+            ["Compris, je vais donc diminuer le temps de chaque exercice.","Compris, je vais donc augmenter le temps de chaque exercice.","On ne peut pas augmenter le temps des exercices, pense à augmenter le nombre de répétitions.","On ne peut plus diminuer le temps des exercices,  pense à diminuer le nombre de répétitions.","Ce fût une bonne séance, on se retrouve bientôt."]
+        ],
+        "unknownTextSpeech":{
+            "type":["Je n'ai pas compris votre demande, vous pouvez par exemple choisir la session abdos en disant: session abdos.","Je n'ai malheureusement pas compris la séance que vous voulez, vous pouvez par exemple choisir la séance haut du corps en disant: séance haut du corps."],
+            "start":["Je n'ai pas compris votre demande, pour lancer la séance dîtes simplement: lance la séance." ,"Je n'ai malheureusement pas compris, vous pouvez lancer la session en disant: lance la session."],
+            "end":["Je n'ai malheureusement pas compris, vous pouvez choisir de recommencer une session en disant: encore une fois ou bien terminer votre entrainement en disant: j'ai terminé.","Je n'ai pas vraiment compris votre demande, vous pouvez recommencer une session en disant: encore une fois ou bien choisir de terminer votre entrainement en disant: j'ai terminé."],
+            "update":["Je n'ai pas bien compris ce que vous voulez faire, vous pouvez par exemple juger la séance comme difficile ou bien facile","Je n'ai pas compris votre ressenti, vous pouvez par exemple juger la séance comme facile pour que je l'adapte."]
+        }
+            
+}
