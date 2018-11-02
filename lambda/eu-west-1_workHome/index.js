@@ -121,6 +121,9 @@ catch(e){
         context.succeed(buildResponse(options))
       } 
     }
+    else{
+      handleUnknownIntent(context,session)
+    }
   }
 
 
@@ -138,6 +141,9 @@ function handleEndSessionIntent(context){
     options.endSession=false;
     context.succeed(buildResponse(options));
   }
+  else{
+    handleUnknownIntent(context,session)
+  }
 }
     
 /**
@@ -152,6 +158,9 @@ function handleEndSessionIntent(context){
           options.speechText=session.attributes.speechText;
           options.endSession=false;
           context.succeed(buildResponse(options));
+      }
+      else{
+        handleUnknownIntent(context,session)
       }
   }
 
@@ -179,6 +188,9 @@ function handleEndSessionIntent(context){
           options.endSession=false;
           context.succeed(buildResponse(options));
     }
+    else{
+      handleUnknownIntent(context,session)
+    }
   }
 
 /**
@@ -190,31 +202,36 @@ function handleEndSessionIntent(context){
   function handleTypeSessionIntent(request,context,session){
     var options={};
     options.session=session;
-
-    let type=request.intent.slots.typeSession.value;
-    if(type=="abdos"||type=="haut du corps"||type=="bas du corps"){
-     
-      let speech=helpers.randomSpeech(answers.typeTextSpeech);
-      let exercices=session.attributes.user.seances[type].exercices;
-      options.speechText =  speech[0]+" "+type+", "+speech[1];
-      exercices.forEach(element => {
-      options.speechText+="<p> "+element+" </p>";
-      });
-      options.speechText+=speech[2];
-      options.session.attributes.exercicesSession=session.attributes.user.seances[type];
-      options.session.attributes.typeSessionIntent=true;
-      options.session.attributes.launchIntent=false;
-      options.session.attributes.typeSession=type;
-      options.endSession=false;
-      context.succeed(buildResponse(options));
-    
+    if(session.attributes.launchIntent){
+      let type=request.intent.slots.typeSession.value;
+      if(type=="abdos"||type=="haut du corps"||type=="bas du corps"){
+      
+        let speech=helpers.randomSpeech(answers.typeTextSpeech);
+        let exercices=session.attributes.user.seances[type].exercices;
+        options.speechText =  speech[0]+" "+type+", "+speech[1];
+        exercices.forEach(element => {
+        options.speechText+="<p> "+element+" </p>";
+        });
+        options.speechText+=speech[2];
+        options.session.attributes.exercicesSession=session.attributes.user.seances[type];
+        options.session.attributes.typeSessionIntent=true;
+        options.session.attributes.launchIntent=false;
+        options.session.attributes.typeSession=type;
+        options.endSession=false;
+        context.succeed(buildResponse(options));
+      
+      }
+      else{
+        options.speechText="Il faut que tu précises quel type de séance tu veux faire. Par exemple, séance abdos";
+        options.endSession=false;
+        context.succeed(buildResponse(options));
+      }
     }
     else{
-      options.speechText="Il faut que tu précises quel type de séance tu veux faire. Par exemple, séance abdos";
-      options.endSession=false;
-      context.succeed(buildResponse(options));
+      handleUnknownIntent(context,session)
     }
-    
+      
+      
   }
 /**
  * Handler to launch the session 

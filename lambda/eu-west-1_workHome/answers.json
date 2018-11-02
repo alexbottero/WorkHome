@@ -7,8 +7,8 @@
     ],
         "typeTextSpeech":[
             ["Bon choix, vous avez choisi la séance ","Elle est composée des exercices suivants:","Dis moi quand tu es prêt à commencer."],
-            ["Bien, nous allons partir sur une session ","Pour cela il y a les exercices suivants:","Peut-on commencer la séance ?"],
-            ["Ce sera donc la séance","elle contient les exercices suivants:","Peut on lancer la session?"]
+            ["Bien, nous allons partir sur une session ","Pour cela il y a les exercices suivants:","Dis moi quand on peut commencer la séance."],
+            ["Ce sera donc la séance","elle contient les exercices suivants:","Dis moi quand on peut on lancer la session."]
         ],
         "exerciceTextSpeech":[
             ["Exercice 1: ","Exercice 2: ","Exercice 3: ","Exercice 4: ","Fin de l'exercice.","Veux-tu refaire encore un cycle?"],
